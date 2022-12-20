@@ -12,11 +12,13 @@ const DnsCard: React.FC<Props> = ({
       href="https://nextjs.org/docs"
       className={`
       w-full
-      p-6
-      mr-3
-      my-6 m=rounded-xl border text-left 
+      md:w-1/2
+      p-4
+      m=rounded-xl 
+      border-2
+      text-left 
       rounded-xl
-      md:w-1/3
+      bg-gray-50
      
       `}
     >

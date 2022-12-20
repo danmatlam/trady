@@ -8,7 +8,14 @@ export type Props = {
 
 const DnsList: React.FC<Props> = ({ data }) => {
   return (
-    <div className="flex flex-wrap">
+    <div
+      className={`
+      flex
+      gap-3
+      flex-wrap  
+      md:flex-nowrap
+      `}
+    >
       {data.map((item) => (
         <DnsCard key={item.id} data={item} />
       ))}
