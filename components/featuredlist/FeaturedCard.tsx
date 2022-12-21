@@ -21,6 +21,7 @@ const FeaturedCard: React.FC<Props> = ({
       rounded-xl
       ${featured ? "app-green " : "bg-white"}
       ${featured ? "text-slate-50" : "text-gray-900"}
+      
       `}
     >
       <div className="flex items-center  justify-between">

@@ -5,6 +5,7 @@
 .main {
   height: calc(100vh - 6rem);
   overflow: overlay;
+  font-family: "Inter", sans-serif;
 }
 .app-green {
   background: #203b3c;

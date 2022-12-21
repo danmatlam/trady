@@ -7,14 +7,7 @@ export type Props = {
 
 const FeatureList: React.FC<Props> = ({ data }) => {
   return (
-    <div
-      className={`
-      flex
-      gap-3
-      flex-wrap  
-      md:flex-nowrap
-      `}
-    >
+    <div className="flex gap-3 flex-wrap md:flex-nowrap">
       {data.map((item) => (
         <FeaturedCard key={item.id} data={item} />
       ))}
