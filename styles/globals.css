@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --doc-height: 100%;
+}
 .main {
-  height: calc(100vh - 6rem);
+  height: calc(var(--doc-height) - 6rem);
   overflow: overlay;
   font-family: "Inter", sans-serif;
 }

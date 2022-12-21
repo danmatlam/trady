@@ -54,7 +54,7 @@ const ShareForm: React.FC<Props> = () => {
       `}
       >
         <div
-          className={`h-1/2 bg-white rounded-xl ${transitonClass} w-11/12 sm:w-2/3 md:w-1/2`}
+          className={`min-h-1/2 bg-white rounded-xl ${transitonClass} w-11/12 sm:w-2/3 md:w-1/2`}
         >
           <div className="border-b-2 border-gray-100 font-semibold text-slate-800 text-lg flex justify-between items-center py-3 px-4">
             <h1>Share Dns</h1>

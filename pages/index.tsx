@@ -28,7 +28,6 @@ const Home: NextPage = () => {
       featured: false,
     },
   ]);
-
   const [dnsList, setDnsList] = useState<IDns[]>([
     {
       id: 1,
@@ -45,8 +44,15 @@ const Home: NextPage = () => {
       priority: "-",
     },
   ]);
-
   const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const documentHeight = () => {
+      const doc = document.documentElement;
+      doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
+    };
+    documentHeight();
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
