@@ -1,8 +1,12 @@
 import Image from "next/image";
+import { useState } from "react";
+import Modal from ".";
 
-export type Props = {};
+export type Props = {
+  setOpen: (open: boolean) => void;
+};
 
-const Share: React.FC<Props> = () => {
+const ShareButton: React.FC<Props> = ({ setOpen }) => {
   return (
     <div
       className="w-full 
@@ -11,6 +15,7 @@ const Share: React.FC<Props> = () => {
       my-6
       py-9
     bg-white  border-y-2 border-gray-100"
+      onClick={() => setOpen(true)}
     >
       <h1 className="text-slate-800 text-lg mr-3 flex-1 ">
         Want to send these to a friend/colleague to do for you?
@@ -22,4 +27,4 @@ const Share: React.FC<Props> = () => {
   );
 };
 
-export default Share;
+export default ShareButton;

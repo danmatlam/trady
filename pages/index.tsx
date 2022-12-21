@@ -1,14 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { useState } from "react";
 import { IContent, IDns } from "../store/schema";
 import DnsList from "../components/dnslist";
 import FeatureList from "../components/featuredlist";
 import DnsHostTitle from "../components/DnsHostTitle";
-import Share from "../components/Share";
 import AppBar from "../components/layout/AppBar";
 import Footer from "../components/layout/Footer";
+import ShareForm from "../components/shareform";
 
 const Home: NextPage = () => {
   const [featuredList, setFeaturedList] = useState<IContent[]>([
@@ -52,7 +51,6 @@ const Home: NextPage = () => {
         <title>Trady</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className="flex flex-col items-center">
         <AppBar />
         <div className="main flex flex-col items-center md:justify-center">
@@ -70,7 +68,7 @@ const Home: NextPage = () => {
               <FeatureList data={featuredList} />
             </section>
             <section>
-              <Share />
+              <ShareForm />
             </section>
             <section>
               <h1 className="text-slate-500 text-lg my-3">
