@@ -86,12 +86,16 @@ const Home: NextPage = () => {
               <h1 className="text-4xl italic my-3">example.com</h1>
               <HostSearch loading={loading} />
             </section>
-            <LoadingList loading={loading} />
-            <div className={listClass}>
-              <FeatureList data={featuredList} />
-              <ShareForm />
-              <DnsList data={dnsList} />
-            </div>
+
+            {!loading ? (
+              <div>
+                <FeatureList data={featuredList} />
+                <ShareForm />
+                <DnsList data={dnsList} />
+              </div>
+            ) : (
+              <LoadingList loading={loading} />
+            )}
           </div>
         </div>
         <Footer />

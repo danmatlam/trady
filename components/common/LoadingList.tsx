@@ -15,10 +15,13 @@ const LoadingList: React.FC<Props> = ({ loading }) => {
       <div className="h-2 rounded w-3/4 bg-gradient-to-r from-gray-300 to-gray-0 my-6" />
       <div className="grid gap-4 md:grid-cols-2 w-full flex-wrap my-3">
         {items.map((item) => (
-          <div className="col-span-1 border border-gray-200 h-20 rounded-lg p-3">
+          <div
+            key={item}
+            className="col-span-1 border border-gray-200 h-20 rounded-lg p-3"
+          >
             <div className="grid gap-4 grid-cols-2">
               {subItems.map((subItem) => (
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1" key={subItem}>
                   <div className="animate-pulse flex space-x-4">
                     <div className="h-2 rounded w-3/4 bg-gradient-to-r from-gray-400 to-gray-0"></div>
                   </div>
