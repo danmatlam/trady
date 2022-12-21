@@ -23,7 +23,7 @@ const HostSearch: React.FC<Props> = ({ loading }) => {
           height={21}
         />
       ) : (
-        <div className="h-2 rounded w-1/4 bg-gradient-to-r from-gray-300 to-gray-0 my-6" />
+        <div className="h-2 rounded w-1/4 bg-gradient-to-r from-gray-300 to-gray-0 my-2" />
       )}
     </div>
   );
