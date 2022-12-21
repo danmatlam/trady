@@ -1,8 +1,11 @@
-export type Props = {};
+export type Props = {
+  loading: boolean;
+};
 
-const LoadingList: React.FC<Props> = () => {
+const LoadingList: React.FC<Props> = ({ loading }) => {
   const items = [1, 2, 3, 4, 5, 6];
   const subItems = [1, 2, 3, 4];
+  if (!loading) return null;
   return (
     <>
       <h1 className="text-slate-500 text-lg my-3">

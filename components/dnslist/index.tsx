@@ -8,18 +8,16 @@ export type Props = {
 
 const DnsList: React.FC<Props> = ({ data }) => {
   return (
-    <div
-      className={`
-      flex
-      gap-3
-      flex-wrap  
-      md:flex-nowrap
-      `}
-    >
-      {data.map((item) => (
-        <DnsCard key={item.id} data={item} />
-      ))}
-    </div>
+    <section>
+      <h1 className="text-slate-500 text-lg my-3">
+        Are you a PRO at DNS? Update these records
+      </h1>
+      <div className="flex  gap-3  flex-wrap   md:flex-nowrap">
+        {data.map((item) => (
+          <DnsCard key={item.id} data={item} />
+        ))}
+      </div>
+    </section>
   );
 };
 

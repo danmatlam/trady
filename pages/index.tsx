@@ -82,30 +82,16 @@ const Home: NextPage = () => {
         <AppBar />
         <div className="main flex flex-col items-center md:justify-center w-full">
           <div className="p-6 md:border-2 rounded-xl  max-w-4xl  w-full">
-            <section className="flex items-center justify-center">
+            <section className="flex flex-col gap-3 items-center justify-center ">
               <h1 className="text-4xl italic my-3">example.com</h1>
-            </section>
-            <section>
               <HostSearch loading={loading} />
             </section>
+            <LoadingList loading={loading} />
             <div className={listClass}>
-              <section>
-                <h1 className="text-slate-500 text-lg my-3">
-                  How do you want to update your DNS?
-                </h1>
-                <FeatureList data={featuredList} />
-              </section>
-              <section>
-                <ShareForm />
-              </section>
-              <section>
-                <h1 className="text-slate-500 text-lg my-3">
-                  Are you a PRO at DNS? Update these records
-                </h1>
-                <DnsList data={dnsList} />
-              </section>
+              <FeatureList data={featuredList} />
+              <ShareForm />
+              <DnsList data={dnsList} />
             </div>
-            {loading ? <LoadingList /> : null}
           </div>
         </div>
         <Footer />
