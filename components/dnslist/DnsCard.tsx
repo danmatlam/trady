@@ -13,7 +13,8 @@ const DnsCard: React.FC<Props> = ({
       className={`
       w-full
       md:w-1/2
-      p-4
+      px-4
+      py-2
       m=rounded-xl 
       border-2
       text-left 

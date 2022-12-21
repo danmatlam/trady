@@ -5,6 +5,10 @@ import { useState } from "react";
 import { IContent, IDns } from "../store/schema";
 import DnsList from "../components/dnslist";
 import FeatureList from "../components/featuredlist";
+import DnsHostTitle from "../components/DnsHostTitle";
+import Share from "../components/Share";
+import AppBar from "../components/layout/AppBar";
+import Footer from "../components/layout/Footer";
 
 const Home: NextPage = () => {
   const [featuredList, setFeaturedList] = useState<IContent[]>([
@@ -43,46 +47,41 @@ const Home: NextPage = () => {
   ]);
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="">
       <Head>
         <title>Trady</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="p-6 border-2 rounded-xl w-full  max-w-4xl">
-        <section className="flex items-center justify-center">
-          <h1 className="text-5xl italic my-3">examle.com</h1>
-        </section>
 
-        <section>
-          <h1 className="text-slate-500 text-lg my-3">
-            How do you want to update your DNS?
-          </h1>
-          <FeatureList data={featuredList} />
-        </section>
-
-        <section>
-          <h1 className="text-slate-500 text-lg my-3">
-            Are you a PRO at DNS? Update these records
-          </h1>
-          <DnsList data={dnsList} />
-        </section>
+      <main className="flex flex-col items-center">
+        <AppBar />
+        <div className="main flex flex-col items-center md:justify-center">
+          <div className="p-6 md:border-2 rounded-xl w-full  max-w-4xl ">
+            <section className="flex items-center justify-center">
+              <h1 className="text-4xl italic my-3">examle.com</h1>
+            </section>
+            <section>
+              <DnsHostTitle />
+            </section>
+            <section>
+              <h1 className="text-slate-500 text-lg my-3">
+                How do you want to update your DNS?
+              </h1>
+              <FeatureList data={featuredList} />
+            </section>
+            <section>
+              <Share />
+            </section>
+            <section>
+              <h1 className="text-slate-500 text-lg my-3">
+                Are you a PRO at DNS? Update these records
+              </h1>
+              <DnsList data={dnsList} />
+            </section>
+          </div>
+        </div>
+        <Footer />
       </main>
-
-      <footer className="bg-gray-0 h-16 fixed bottom-0 w-full flex justify-center aling-middle">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/trady-light.svg"
-            alt="Trady Logo"
-            width={72}
-            height={16}
-          />
-        </a>
-      </footer>
     </div>
   );
 };

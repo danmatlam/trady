@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.main {
+  height: calc(100vh - 6rem);
+  overflow: overlay;
+}
+.app-green {
+  background: #203b3c;
+}
+
+::-webkit-scrollbar {
+  width: 3pt;
+  height: 3pt;
+}
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: var(--gray-100);
+}
+::-webkit-scrollbar-thumb {
+  background: #caefb3;
+  border-radius: 1.8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-100);
+}
